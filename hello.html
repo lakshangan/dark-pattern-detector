@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DETECTeXe</title>
+    <style>
+        .para1{
+            color: black;
+            text-align: left;
+            margin-top: 0%;
+            align-items: center;    
+            position: absolute;
+                top: 1%;
+                left: 20%;
+                margin-left: 22px;
+                margin-top: 6px;
+        }
+        .para2{
+            color: black;
+        }
+        .bod{
+            padding-right: 160px;
+            padding-bottom: 110px;
+            background-color: whitesmoke;
+            border: 3px solid black;
+            border-radius: 8px;        
+        }
+        .img{
+        
+                margin-right: 10px;
+                margin-left: 20px;
+                
+        }
+        .tit{
+            text-align: center;
+            word-spacing: 40%;
+        }
+        .switch {
+             position: relative;
+            left: 120px;
+            display: inline-block;
+            width: 54px;
+            height: 30px;
+        }
+
+        .switch input { 
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(24px);
+            -ms-transform: translateX(24px);
+            transform: translateX(24px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+        #detect{
+            font-size: medium;
+            position: absolute;
+            top: 118px;
+            left: 30px;
+        }
+        #flag{
+            font-size: medium;
+            position: absolute;
+            top: 165px;
+            left: 40px;
+        }
+        #mon{
+            font-size: medium;
+            position: absolute;
+            top: 213px;
+            left: 30px;
+        }
+        .button {
+            background-color: green;
+            border-radius: 8px;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: double;
+            text-decoration: none;
+            display: inline-block;  
+            font-size: 12px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+            height: 35px;
+            width: 80px;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+        .button2:hover {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+        .butt{
+            background-color: red; 
+            border-radius: 8px;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: double;
+            text-decoration: none;
+            display: inline-block;  
+            font-size: 12px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+            height: 35px;
+            width: 80px;
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+        }
+        .butt1:hover {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+   </style>
+    </head><br>
+    <body class="bod">
+        <script src="popup.js"></script>
+        <img src="fauxfinder logo.png" class="img" width="37" height="37">
+        <div class="para1"><h1>FAUXFinder</h1></div>
+        <div class="para2">
+        </div> 
+        <br><br><br><br>
+        <div>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <br>
+        <div>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+        </div>
+        <br>
+        <div>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+        </div>
+        <div>
+            <p id="detect"><b>DETECT</b></p>
+            <p id="flag"><b>FLAG</b></p>
+            <p id="mon"><b>MONITOR</b></p>
+        </div>
+        <div>
+            <button class="button button2">ENABLE</button>
+            <button class="butt butt1">DISABLE</button>
+        </div>
+    </body>
+</html>
